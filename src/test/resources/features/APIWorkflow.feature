@@ -19,7 +19,7 @@ Feature: API HRMS Flow
     And the employee id "employee.employee_id" must match with globally stored employee id
     And this employee data at "employee" object matches with the data used to create the employee
       | emp_firstname | emp_lastname | emp_middle_name | emp_gender | emp_birthday | emp_status | emp_job_title |
-      | Jacob         | Bronson      | Van             | Male       | 2003-03-20   | working    | QA            |
+      | Jacob         | Bronson      | Van             | Male       | 2003-03-20   | Working    | QA            |
 
   @api
   Scenario: Creating an employee using json body
@@ -31,7 +31,7 @@ Feature: API HRMS Flow
 
   @api
   Scenario: Creating an employee using highly dynamic scenario
-    Given a request is prepared for creating an employee with data "Jacob", "Bronson", "Van", "M", "2003-03-20", "working", "QA"
+    Given a request is prepared for creating an employee with data "Jacob", "Bronson", "Van", "M", "2003-03-20", "Working", "QA"
     When a POST call is made to create an employee
     Then the status code for creating an employee is 201
     And  the employee created contains key " Message" and value "Employee Created"
@@ -54,4 +54,4 @@ Feature: API HRMS Flow
     And the employee id "employee.employee_id" must match with globally stored employee id
     And this employee data at "employee" object matches with the data used to partially update the employee
       | emp_firstname | emp_lastname | emp_middle_name | emp_gender | emp_birthday | emp_status | emp_job_title |
-      | Brandosa      | Bronson      | Van             | Male       | 2003-03-20   | working    | QA            |
+      | Brandosa      | Bronson      | Van             | Male       | 2003-03-20   | Working    | QA            |
