@@ -29,7 +29,7 @@ public class CommonMethods extends PageInitializer {
                 ChromeOptions ops = new ChromeOptions();
                 //ops.addArguments("--no-sandbox");
                 //ops.addArguments("--remote-allow-origins=*");
-                ops.addArguments("--headless=new");
+                //ops.addArguments("--headless=new");
                 driver = new ChromeDriver(ops);
                 break;
             case "firefox":
